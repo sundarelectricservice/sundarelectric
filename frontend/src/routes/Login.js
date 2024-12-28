@@ -18,18 +18,41 @@ const LoginComponent = () => {
     const [createUnAuthModalOpen, setCreateUnAuthModalOpen] = useState(false);
 
     const login = async () => {
-        const data = { email, password };
-        const response = await makeUnauthenticatedPOSTRequest("/auth/login", data);
-        if (response && !response.err) {
-            const token = response.token;
+    const data = { email, password };
+    
+    try {
+        // Make the POST request to the backend with the credentials
+        const response = await fetch("https://sundarelectricbackend.onrender.com/auth/login", {
+            method: "POST",
+            credentials: "include", // Ensure cookies are included in the request
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        // Check if the response is OK (status code 200-299)
+        if (response.ok) {
+            const result = await response.json(); // Parse JSON response
+            const token = result.token; // Assuming the token is in the response
+
+            // Set the token in cookies with expiration date
             const date = new Date();
-            date.setDate(date.getDate() + 30);
+            date.setDate(date.getDate() + 30); // Token expiration in 30 days
             setCookie("token", token, { path: "/", expires: date });
+
+            // Navigate to the admin page
             navigate("/admin");
         } else {
+            // If login fails, open the error modal
             setCreateUnAuthModalOpen(true);
         }
-    };
+    } catch (error) {
+        console.error("Login error:", error);
+        setCreateUnAuthModalOpen(true); // Open modal on error
+    }
+};
+
 
     return (
         <div className="relative w-full h-screen flex p-4 bg-gray-100">
