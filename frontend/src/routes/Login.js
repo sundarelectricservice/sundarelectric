@@ -84,7 +84,7 @@ const LoginComponent = () => {
                                 login();
                             }}
                         >
-                            <Link to={"/admin"}>LOG IN</Link>
+                            LOG IN
                         </button>
                     </div>
                 </div>
