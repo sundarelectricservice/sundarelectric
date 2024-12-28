@@ -11,7 +11,10 @@ const authRoutes = require("./routes/auth");
 const songRoutes = require("./routes/song");
 const User = require("./models/User");
 
-app.use(cors());
+app.use(cors({
+  origin: "https://sundarelectricservice.onrender.com",
+  credentials: true,
+}));
 app.use(express.json());
 
 // connect mongodb to our node app. mongodb+srv://sundarelectricservice:<db_password>@cluster0.ddgyf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
