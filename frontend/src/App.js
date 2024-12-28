@@ -106,10 +106,7 @@ function App() {
             path="/contact"
             element={<Contact />}
           />
-          // <Route
-          //   path="/signup"
-          //   element={<SignupComponent />}
-          // />
+          
            <Route
             path="/login"
             element={<LoginComponent />}
