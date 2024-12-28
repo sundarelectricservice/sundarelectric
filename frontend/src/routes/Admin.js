@@ -9,7 +9,7 @@ import DropdownMenu from "../components/DropdownMenu";
 const Admin = () => {
     const [songData, setSongData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 2; // Items per page
+    const itemsPerPage = 15; // Items per page
 
     useEffect(() => {
         const getData = async () => {
