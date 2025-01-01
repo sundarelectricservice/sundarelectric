@@ -1,7 +1,7 @@
 import { useState } from "react";
 import HomeContainer from "../containers/HomeContainer";
-import photo1 from "../assets/tubu1.jpg";
-import photo2 from "../assets/tubu2.jpg";
+import photo1 from "../assets/trolley1.jpg";
+import photo2 from "../assets/trolley2.jpg";
 import Footer from "../containers/Footer";
 import { Link } from "react-router-dom";
 import ContactModal from "../components/ContactModal";
@@ -56,19 +56,19 @@ const TubularBatteries = () => {
 
                     {/* Product Information */}
                     <div className="flex flex-col space-y-4 md:w-1/2 text-gray-800 md:pl-6 px-2 md:px-0">
-                        <h1 className="text-2xl font-bold">High-Capacity Tubular Batteries</h1>
+                        <h1 className="text-2xl font-bold">Tubular Battery Trolley</h1>
                         <p className="text-lg">
                             <strong>Brand:</strong> Luminous, Exide Batteries, Autobat Batteries
                         </p>
                         <p>
-                        Our high-capacity tubular batteries are built for superior performance during prolonged power outages.
+                        The leader in UPS brings Trolley for an elegant look for home and safety for children. A trolley is also known as Inverter battery cover or case, It is elegant, movable, safe and made from long-lasting material. It provides home an elegant look, stops the damage of flooring from acid spillage and provides safety to children. The battery is kept inside trolley and Inverter / UPS is placed on top of it, thus taking less space.
                         </p>
                         <ul className="list-disc pl-4">
-                            <li>Exceptional durability and reliability</li>
-                            <li>Easy installation and operation</li>
-                            <li>Energy-efficient design</li>
-                            <li>Hassle-free maintenance</li>
-                            <li>Extended operational longevity</li>
+                            <li>Silver color trolley made from highly durable plastic</li>
+                            <li>Protects the Floor from acid spillage and overflow</li>
+                            <li>Protection from Shocks and Safety for Children</li>
+                            <li>5 wheels including one wheel in the center to give maximum support to the heavy battery</li>
+                            <li>Elegant look for your Home</li>
                         </ul>
                         <p className="text-sm text-gray-600">
                             Perfect for home and commercial use, our inverters are designed to

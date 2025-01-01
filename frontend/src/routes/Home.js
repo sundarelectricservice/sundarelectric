@@ -3,7 +3,7 @@ import HomeContainer from "../containers/HomeContainer";
 import Footer from "../containers/Footer";
 import photo1 from "../assets/inverter1.jpg";
 import photo2 from "../assets/ups1.jpg";
-import photo3 from "../assets/tubu1.jpg";
+import photo3 from "../assets/trolley1.jpg";
 import photo4 from "../assets/microtek.webp";
 import photo5 from "../assets/smf2.webp";
 import photo6 from "../assets/single2.jpg";
@@ -27,8 +27,8 @@ const Trending = [
     },
     {
         imgUrl: photo3,
-        title: "Tubular Inverter Batteries",
-        description: "High-performance batteries with excellent longevity and backup.",
+        title: "Tubular Battery Trolley",
+        description: "Silver color trolley made from highly durable plastic elegant look for your home.",
         route: "/tubularinverterbattery",
     },
     {
